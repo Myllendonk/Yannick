@@ -1,0 +1,6 @@
+streamlit
+matplotlib
+pandas
+streamlit-extras
+colormath
+st-gsheets-connection

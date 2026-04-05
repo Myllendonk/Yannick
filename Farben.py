@@ -23,7 +23,7 @@ st.set_option("client.showErrorDetails", False)
 
 st.set_page_config(layout="wide")
 
-st.title("Das große Häkelrunden Farb-Duell")
+st.title("Yannicks Lieblingsfarbe")
 
 show_name = st.checkbox("Farbname anzeigen", value=True)
 FILTER_FILE = "filtered_colors.json"
@@ -317,10 +317,10 @@ def upload_to_gsheet(data):
         for color in data
     ])
 
-    conn.update(data=df, worksheet="Alle")
+    conn.update(data=df, worksheet="Yannick")
 def download_from_gsheet():
     st.write("Downloading")
-    df = conn.read(worksheet="Alle", ttl = 0)
+    df = conn.read(worksheet="Yannick", ttl = 0)
 
     if df is None or df.empty:
         return {}
